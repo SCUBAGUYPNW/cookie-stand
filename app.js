@@ -26,7 +26,14 @@ var firstAndPike = {
     return total;
   }
 };
-
+var h3El = document.createElement('h3');
+heEl.textContent = this.name;
+for (var k =0; k < hours.length; k++) {
+  var liEl = document.createElement('li');
+  liEl.textContent = hours[k] + ': ' + this.arrCookies[k] + ' cookies';
+  console.log(liEl);
+  firstAndPike.appendChild(liEl)
+}
 
       var seaTacAirport = {
         min_customer: 3
