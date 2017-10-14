@@ -158,8 +158,8 @@ var seattleCenter = {
     // <h3 id="seatac"></h3>
     // <ul id="sealist"></ul>
 
-    var seaList = document.getElementById('seaList');
-    var seaTac = document.getElementById('seaTac');
+    var cenList = document.getElementById('cenList');
+    var seaCen = document.getElementById('seaCen');
     this.calcRandCustByHour();
     this.calcCookiesPerHour();
     this.calcTotalDailyCookies();
@@ -172,7 +172,7 @@ var seattleCenter = {
     for(var k = 0; k < storeHours.length; k++) {
       var liEl = document.createElement('li');
       liEl.textContent = storeHours[k] + ': ' + this.cookiesSoldByHour[k] + ' cookies';
-      seaList.appendChild(liEl);
+      cenList.appendChild(liEl);
     }
     console.log(liEl);
     var listTotal = document.createElement('li');
@@ -180,7 +180,7 @@ var seattleCenter = {
     cenList.appendChild(listTotal);
   }
 };
-seaTacAirport.render();
+seattleCenter.render();
 
 
 
