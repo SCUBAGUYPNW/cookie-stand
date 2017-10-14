@@ -1,40 +1,39 @@
 'use strict';
+var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var firstAndPike = {
-  min_customer: 23,
-  max_customer: 65,
-  avg_cookies: 6.3,
-  arrTime: [],
-  arrCookies: [],
-  customerNum: function() {
-    var avg_customer = Math.floor(Math.random() * (this.max_customer - this.min_customer + 1)) + this.min_customer;
-    return avg_customer;
+  storeName: 'First and Pike',
+  minCustPerHour: 23,
+  maxCustPerHour: 65,
+  avgCookiesSoldPerHour: 6.3,
+  randCustByHour: [],
+  cookiesSoldByHour: [],
+  totalDailyCookies: 0,
+  calcRandCustByHour: function() {
+    for(var i = 0; i < storeHours.length; i++)
+      this.randCustByHour.push(Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)) + this.minCustPerHour);
+    console.log(this.randCustByHour[i]);
+    return randCustByHour;
   },
-  resultsObj: {},
   cookiesPerHour: function() {
-    for (var i = 0; i < 15; i++) {
-      var time = i + 6;
-      this.arrTime.push(time);
-      this.arrCookies.push(Math.round(this.customerNum() * this.avg_cookies));
+    for (var j = 0; j < this.storeHours.length; j++) {
+      this.cookiesSoldByHour.push(Math.round(this.customerNum() * this.avg_cookies));
     }
-    return this.arrCookies;
+    return this.cookiesSoldByHour;
   },
-  totalCookies: function() {
-    var total = 0;
-    for (var i = 0; i < this.arrCookies.length; i++) {
-      total += this.arrCookies[i];
+  calcTotalDailyCookies: function() {
+    for (var i = 0; i < this.storeHours.length; i++) {
+      totalDailyCookies += this.cookiesSoldByHour[i];
     }
-    return total;
+    return totalDailyCookies;
   }
 };
-var h3El = document.createElement('h3');
-heEl.textContent = this.name;
-for (var k =0; k < hours.length; k++) {
-  var liEl = document.createElement('li');
-  liEl.textContent = hours[k] + ': ' + this.arrCookies[k] + ' cookies';
-  console.log(liEl);
-  firstAndPike.appendChild(liEl)
-}
 
-      var seaTacAirport = {
-        min_customer: 3
-      }
+var h3El = document.createElement('h3');
+heEl.textContent = this.storeName;
+storeName.appendChild(h3EL);
+for (var k = 0; k < hours.length; k++) {
+  var liEl = document.createElement('li');
+  liEl.textContent = hours[k] + ': ' + this.cookiesSoldByHour[k] + ' cookies';
+  console.log(liEl);
+  firstAndPike.appendChild(liEl);
+}
