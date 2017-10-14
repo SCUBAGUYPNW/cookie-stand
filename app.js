@@ -10,13 +10,13 @@ var firstAndPike = {
   totalDailyCookies: 0,
   calcRandCustByHour: function() {
     for(var i = 0; i < storeHours.length; i++)
-      this.randCustByHour.push(Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)) + this.minCustPerHour);
+      this.randCustByHour.push(Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)));
     console.log(this.randCustByHour[i]);
     return randCustByHour;
   },
-  cookiesPerHour: function() {
+  calcCookiesPerHour: function() {
     for (var j = 0; j < this.storeHours.length; j++) {
-      this.cookiesSoldByHour.push(Math.round(this.customerNum() * this.avg_cookies));
+      this.cookiesSoldByHour.push(Math.round(this.randCustByHour() * this.cookiesSoldByHour));
     }
     return this.cookiesSoldByHour;
   },
@@ -30,7 +30,7 @@ var firstAndPike = {
 
 var h3El = document.createElement('h3');
 heEl.textContent = this.storeName;
-storeName.appendChild(h3EL);
+storeName.appendChild(h3El);
 for (var k = 0; k < hours.length; k++) {
   var liEl = document.createElement('li');
   liEl.textContent = hours[k] + ': ' + this.cookiesSoldByHour[k] + ' cookies';
