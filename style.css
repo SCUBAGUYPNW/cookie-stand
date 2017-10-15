@@ -1,0 +1,16 @@
+
+#salespage {
+  background-image: url(img/SEA&MR.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+
+}
+div{
+  float:left;
+  width:200px;
+  /*height:75px*/
+  margin:5px
+  boarder: 3px solid #73AD21;
+background-color: rgba(255, 255, 255, .3);
+}
