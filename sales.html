@@ -3,29 +3,38 @@
 <head>
   <meta charset="utf-8">
   <title>Constructor Demo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sales.css">
 
 </head>
 <body>
-<form id="Salmon-Cookies-Store-Data-Form">
+<form id="newStoreForm">
+  <fieldset>
   <legend>Add a New Store Location</legend>
   <label for="newStoreName">Name of New Location:</label>
-  <input type="text" name="NewStoreName"/>
+<br>
+  <input type="text" name="newStoreName"/>
   <br>
-  <label for="minCustPerHourClientSupplied">Minimum Customers per Hour: </label>
+  <br>
+  <label for="minCustPerHourClientSupplied">Minimum Customers per Hour:</label>
+  <br>
   <input type="text" name="minCustPerHourClientSupplied"/>
   <br>
+  <br>
 <label for="maxCustPerHourClientSupplied">Maximum Customers Per Hour:</label>
+<br>
 <input type="text" name="maxCustPerHourClientSupplied"/>
 <br>
+<br>
 <label for="avgCookiesSoldPerHourClientSupplied">Average cookies sold per Hour:</label>
+<br>
 <input type="text" name="avgCookiesSoldPerHourClientSupplied"/>
+<br>
 <br>
 <button type="submit">Create new store (Congrats!)</button>
 </fieldset>
 </form>
   <h1>Daily Salmon Cookie Sales By Hour And Location</h1>
   <table id="cookiestands"></table>
-  <script type="text/javascript" src="./app.js"></script>
+  <script type="text/javascript" src="./test.js"></script>
 </body>
 </html>

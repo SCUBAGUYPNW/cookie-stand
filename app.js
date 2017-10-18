@@ -38,7 +38,8 @@ function makeStands() {
   new MakeLocation('Seattle Center', 11, 38, 3.7);
   new MakeLocation('Capital Hill', 20, 38, 2.3);
   new MakeLocation('Seatac Airport', 2, 16, 4.6);
-};
+  };
+
 
 makeStands();
 console.log(allLocations);
