@@ -7,7 +7,23 @@
 
 </head>
 <body>
-
+<form id="Salmon-Cookies-Store-Data-Form">
+  <legend>Add a New Store Location</legend>
+  <label for="newStoreName">Name of New Location:</label>
+  <input type="text" name="NewStoreName"/>
+  <br>
+  <label for="minCustPerHourClientSupplied">Minimum Customers per Hour: </label>
+  <input type="text" name="minCustPerHourClientSupplied"/>
+  <br>
+<label for="maxCustPerHourClientSupplied">Maximum Customers Per Hour:</label>
+<input type="text" name="maxCustPerHourClientSupplied"/>
+<br>
+<label for="avgCookiesSoldPerHourClientSupplied">Average cookies sold per Hour:</label>
+<input type="text" name="avgCookiesSoldPerHourClientSupplied"/>
+<br>
+<button type="submit">Create new store (Congrats!)</button>
+</fieldset>
+</form>
   <h1>Daily Salmon Cookie Sales By Hour And Location</h1>
   <table id="cookiestands"></table>
   <script type="text/javascript" src="./app.js"></script>
