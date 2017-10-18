@@ -79,9 +79,7 @@ function addStoreData(){
       tableRow.appendChild(tdEl);
     }
     cookiestands.appendChild(tableRow);
-
   }
-
 
   //for (var l = 0; l < allLocations.length; l++) {
   // var tableData2 = document.createElement('td');
