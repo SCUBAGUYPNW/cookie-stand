@@ -16,14 +16,13 @@
 .navbar a.active-page {
   background-color: lightblue;
 }
-.navbar #cookieDescription {
-  position: relative;
-top:30;
-  float: left;
-  }
+ul {
+  padding: 100px
+  list-style-type: none;
+}
 body {
 background-image: url(img/SEA&MR.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: black;
-}
+    }
