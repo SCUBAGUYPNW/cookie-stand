@@ -1,12 +1,10 @@
-
-#salespage {
   background-image: url(img/SEA&MR.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: black;
 
-}
-div{
+
+div .newstoreform{
   float:left;
   width:200px;
   /*height:75px*/

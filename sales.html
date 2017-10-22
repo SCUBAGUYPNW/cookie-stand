@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel = "stylesheet" type ="text/css" href="style.css" />
+<head>
+  <meta charset="utf-8">
+  <title>Constructor Demo</title>
+  <link rel="stylesheet" href="sales.css">
 
-    <meta charset="utf-8">
-    <title>Store Sales</title>
-  </head>
-  <h1>Salmon Cookies Sales</h1>
-<body id="salespage">
-
-  <div id=fAndP>
-    <h3 id=pikeHead></h3>
-  <ul id="pikeList"></ul>
-</div>
-
-<div id=seaTac>
-  <h3 id=seaTacHead></h3>
-  <ul id="seaList"></ul>
-</div>
-
-<div id=seaCen>
-  <h3 id=seaCenHead></h3>
-  <ul id="cenList"></ul>
-</div>
-
-<div id="capHill">
-  <h3 id="capHillHead"></h3>
-  <ul id="capList"></ul>
-</div>
-
-<div id=alki>
-  <h3 id=alkiHead></h3>
-  <ul id="alkiList"></ul>
-</div>
-<script type="text/javascript" src="./app.js">
-
-
-
-
-</script>
-  </body>
-
-
+</head>
+<body>
+<form id="newStoreForm">
+  <fieldset>
+  <legend>Add a New Store Location</legend>
+  <label for="newStoreName">Name of New Location:</label>
+<br>
+  <input type="text" name="newStoreName"/>
+  <br>
+  <br>
+  <label for="minCustPerHourClientSupplied">Minimum Customers per Hour:</label>
+  <br>
+  <input type="text" name="minCustPerHourClientSupplied"/>
+  <br>
+  <br>
+<label for="maxCustPerHourClientSupplied">Maximum Customers Per Hour:</label>
+<br>
+<input type="text" name="maxCustPerHourClientSupplied"/>
+<br>
+<br>
+<label for="avgCookiesSoldPerHourClientSupplied">Average cookies sold per Hour:</label>
+<br>
+<input type="text" name="avgCookiesSoldPerHourClientSupplied"/>
+<br>
+<br>
+<br>
+<br>
+<button type="submit">Create new store (Congrats!)</button>
+</fieldset>
+</form>
+  <h1>Daily Simulated Salmon Cookie Sales By Hour And Location</h1>
+  <table id="cookiestands"></table>
+  <script type="text/javascript" src="./app.js"></script>
+</body>
 </html>
