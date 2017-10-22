@@ -17,6 +17,7 @@ function MakeLocation(name, minCustPerHour, maxCustPerHour,avgCookiesSoldPerHour
   allLocations.push(this);
 
   this.calcRandCustByHour = function () {
+    console.log('HIT calc: ', storeHours.length);
     for (var i = 0; i < storeHours.length; i++) {
       this.randCustByHour.push(Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1) + this.minCustPerHour));
       console.log('hello');
@@ -30,6 +31,8 @@ function MakeLocation(name, minCustPerHour, maxCustPerHour,avgCookiesSoldPerHour
       console.log(this.cookiesSoldByHour[j]);
     }
   };
+  this.calcRandCustByHour();
+  this.calcCookiesPerHour();
 };
 
 function makeStands() {
