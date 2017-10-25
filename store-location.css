@@ -17,12 +17,31 @@
   background-color: lightblue;
 }
 ul {
-  padding: 100px
-  list-style-type: none;
+  list-style: none;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 50px
+
 }
 body {
 background-image: url(img/SEA&MR.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: black;
+}
+  h1 {
+      color: white;
+      margin-left: 70px;
+  }
     }
+    #storeLocations {
+    margin: 60px;
+    background-color: #ffffff;
+    border: 1px, solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    font-size: 20px;
+    color: black;
+    padding: 15px
+    background-color: light blue
+  }

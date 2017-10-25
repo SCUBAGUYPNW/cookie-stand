@@ -133,20 +133,20 @@ function grabClientData(){
   console.log(newStoreName);
   var minCustPerHourClientSupplied = parseInt(event.target.minCustPerHourClientSupplied.value);
   //if (string(minCustPerHourClientSupplied) === null || string(minCustPerHourClientSupplied) == '') {
-    //alert ('Please enter a minimum number of customers per hour.');
-    //return false;
+  //alert ('Please enter a minimum number of customers per hour.');
+  //return false;
   //}
   console.log(minCustPerHourClientSupplied);
   var maxCustPerHourClientSupplied = parseInt(event.target.maxCustPerHourClientSupplied.value);
   //if (string(maxCustPerHourClientSupplied) == null || string(maxCustPerHourClientSupplied) === '' || maxCustPerHourClientSupplied > minCustPerHourClientSupplied) {
-    //alert ('Please enter a Minimum customer per hour amount.');
-    //return false;
+  //alert ('Please enter a Minimum customer per hour amount.');
+  //return false;
   //}
   console.log(maxCustPerHourClientSupplied);
   var avgCookiesSoldPerHourClientSupplied = parseInt(event.target.avgCookiesSoldPerHourClientSupplied.value);
   //if (avgCookiesSoldPerHourClientSupplied == null || avgCookiesSoldPerHourClientSupplied == '') {
-    //alert ('Please enter a value for average cookies sold per hour.');
-    //return false;
+  //alert ('Please enter a value for average cookies sold per hour.');
+  //return false;
   //}
 
   console.log(avgCookiesSoldPerHourClientSupplied);
