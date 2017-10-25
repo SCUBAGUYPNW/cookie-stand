@@ -1,0 +1,51 @@
+.navbar {
+  overflow: hidden;
+  background-color: #303;
+  position: right;
+  top: 0;
+  width: 100%
+}
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 20px 40px;
+  text-decoration: none;
+}
+.navbar a.active-page {
+  background-color: lightblue;
+}
+ul {
+  list-style: none;
+  background-color: #ffffff;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  border: 1px, solid black;
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 75px;
+  padding: 50px;
+  color: black;
+  }
+body {
+background-image: url(img/SEA&MR.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+}
+  h1 {
+      color: white;
+      margin-left: 70px;
+  }
+    }
+    #storeLocations {
+    background-color: #ffffff;
+    border: 1px, solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    font-size: 20px;
+    color: black;
+    padding: 15px
+    background-color: light blue
+  }

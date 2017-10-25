@@ -1,6 +1,6 @@
 'use strict';
 
-var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var allLocations = [];
 var totalCookiesByHour = 0;
 var cookiestands = document.getElementById('cookiestands');
@@ -61,7 +61,7 @@ function makeStands() {
   new MakeLocation('Seatac Airport', 3, 24, 1.2);
   new MakeLocation('Seattle Center', 11, 38, 3.7);
   new MakeLocation('Capital Hill', 20, 38, 2.3);
-  new MakeLocation('Seatac Airport', 2, 16, 4.6);
+  new MakeLocation('Alki', 2, 16, 4.6);
 }
 
 makeStands();
@@ -70,7 +70,7 @@ console.log(allLocations);
 function makeHeaderRow() {
   var tableRow = document.createElement('tr');
   var thEl = document.createElement('th');
-  thEl.textContent = '';
+  thEl.textContent = 'Store Location';
   tableRow.appendChild(thEl);
   for(var k = 0; k < storeHours.length; k++){
     var tableHeader = document.createElement('th');
@@ -104,7 +104,7 @@ createTableData();
 function createFooterRow () {
   var tableRow = document.createElement('tr');
   var thEl = document.createElement('th');
-  thEl.textContent = 'By hour:';
+  thEl.textContent = 'Total all by hour:';
   tableRow.appendChild(thEl);
   var allTotal = 0;
   for (var t = 0; t < storeHours.length; t++) {
@@ -126,12 +126,29 @@ createFooterRow();
 function grabClientData(){
   event.preventDefault();
   var newStoreName = event.target.newStoreName.value;
+  if (newStoreName == null || newStoreName == '') {
+    alert ('Please enter a store name.');
+    return false;
+  }
   console.log(newStoreName);
-  var maxCustPerHourClientSupplied = parseInt(event.target.maxCustPerHourClientSupplied.value);
-  console.log(maxCustPerHourClientSupplied);
   var minCustPerHourClientSupplied = parseInt(event.target.minCustPerHourClientSupplied.value);
+  //if (string(minCustPerHourClientSupplied) === null || string(minCustPerHourClientSupplied) == '') {
+  //alert ('Please enter a minimum number of customers per hour.');
+  //return false;
+  //}
   console.log(minCustPerHourClientSupplied);
+  var maxCustPerHourClientSupplied = parseInt(event.target.maxCustPerHourClientSupplied.value);
+  //if (string(maxCustPerHourClientSupplied) == null || string(maxCustPerHourClientSupplied) === '' || maxCustPerHourClientSupplied > minCustPerHourClientSupplied) {
+  //alert ('Please enter a Minimum customer per hour amount.');
+  //return false;
+  //}
+  console.log(maxCustPerHourClientSupplied);
   var avgCookiesSoldPerHourClientSupplied = parseInt(event.target.avgCookiesSoldPerHourClientSupplied.value);
+  //if (avgCookiesSoldPerHourClientSupplied == null || avgCookiesSoldPerHourClientSupplied == '') {
+  //alert ('Please enter a value for average cookies sold per hour.');
+  //return false;
+  //}
+
   console.log(avgCookiesSoldPerHourClientSupplied);
   new MakeLocation(newStoreName,maxCustPerHourClientSupplied,minCustPerHourClientSupplied,avgCookiesSoldPerHourClientSupplied);
   cookiestands.deleteRow(cookiestands.rows.length - 1);
